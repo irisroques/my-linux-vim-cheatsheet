@@ -14,3 +14,9 @@ Cheatsheet of useful linux commands that I always forget
 |O que faz| Comando|
 |---|---|
 |Localizar e substituir| :%s/foo/bar/g|
+
+## Postgres
+
+|O que faz| Comando|
+|---|---|
+|Encontrar maiores bancos de dados | SELECT pg_database.datname, pg_size_pretty(pg_database_size(pg_database.datname)) AS size FROM pg_database ORDER BY pg_database_size(pg_database.datname) DESC; |
