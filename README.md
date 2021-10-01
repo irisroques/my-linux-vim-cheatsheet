@@ -20,3 +20,5 @@ Cheatsheet of useful linux commands that I always forget
 |O que faz| Comando|
 |---|---|
 |Encontrar maiores bancos de dados | SELECT pg_database.datname, pg_size_pretty(pg_database_size(pg_database.datname)) AS size FROM pg_database ORDER BY pg_database_size(pg_database.datname) DESC; |
+|Prepared transactions | SELECT 'rollback prepared ' || gid || ';' FROM pg_prepared_xacts WHERE CURRENT_TIMESTAMP - prepared > '1 min';
+|
